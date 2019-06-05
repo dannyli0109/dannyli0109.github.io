@@ -11,7 +11,9 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(481, 481);
+  let canvas = createCanvas(481, 481);
+  let canvasContainer = document.querySelector('.canvas-container')
+  canvas.parent(canvasContainer)
   game = new Game()
   board = game.board
 }
@@ -67,15 +69,15 @@ function mouseClicked() {
     //     }
 
     // selected.setTarget(board, clickedOn, () => {
-      if (selected.move(board, clickedOn)) {
-        game.nextTurn()
-        board.resetSelections()
+    if (selected.move(board, clickedOn)) {
+      game.nextTurn()
+      board.resetSelections()
 
-      } else {
-        selected.target = false
-        // selected.cb = false
-        board.resetSelections()
-      }
+    } else {
+      selected.target = false
+      // selected.cb = false
+      board.resetSelections()
+    }
     // })
     board.resetSelections()
   } else {

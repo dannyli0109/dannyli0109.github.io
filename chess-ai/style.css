@@ -1,7 +1,45 @@
-html, body {
-  margin: 0;
+body {
   padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: black;
 }
-canvas {
-  display: block;
+
+.text {
+  font-size: 40px;
+  color: white;
+  font-family: 'Bungee Shade', cursive;
+}
+
+.canvas-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.inline-block {
+  display: inline-block !important;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.margin-right {
+  margin-right: 20px;
+}
+
+.block {
+  display: block !important;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  text-align: center;
 }
